@@ -1,0 +1,12 @@
+<p></p>
+<div class="card mb-3 col-lg-6">
+  <img class="card-img col-lg-6" src="{{imageBaseUrl+selectedProduct.poster_path}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{selectedProduct.title}}</h5>
+    <p class="card-text">Etiket: {{selectedProduct.tagline}}</p>
+    <p class="card-text">Özet: {{selectedProduct.overview}}</p>
+    <p class="card-text"><small class="text-muted">Yayın Tarihi: {{selectedProduct.release_date}}</small></p>
+    <h5>Tür</h5>
+    <p *ngFor="let item of selectedProduct.genres">{{item.name}}</p>
+  </div>
+</div>

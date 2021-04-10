@@ -1,0 +1,19 @@
+
+<div *ngFor="let item of category" class="" style="display: inline-block;">
+  <button type="button" (click)="trigger(item.id)" class="btn btn-primary">{{item.name}}</button>
+</div>
+<button type="button" class="btn btn-primary"></button>
+
+<div *ngFor="let item of catdetail " style="display: inline-block;">
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{imageBaseUrl+item.poster_path}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <p class="card-text">{{item.overview}}</p>
+      <a [routerLink]="['/movie',item.id]">detay </a>
+
+    </div>
+  </div>
+  </div>
+

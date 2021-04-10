@@ -1,0 +1,38 @@
+
+<div *ngFor="let item of posts " style="display: inline-block;">
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{imageBaseUrl+item.poster_path}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{item.title}}</h5>
+    <p class="card-text">{{item.overview}}</p>
+    <!-- <a href="{{item.id}}" class="btn btn-primary">Film detayı</a> -->
+    <a [routerLink]="['/movie',item.id]">detay </a>
+
+  </div>
+</div>
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item" (click)="triggerPrevious()"><a class="page-link" [routerLink]="['/movies',ss-2]">Previous</a></li>
+    <li class="page-item" (click)="triggerNext()"><a class="page-link" [routerLink]="['/movies',ss]">Next</a></li>
+  </ul>
+</nav>
+
+<!-- |paginate:{id:'listing_pagination',
+ itemsPerPage:10,
+ totalItems:totalRecors,
+ currentPage:page -->
+
+<!--
+</div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li *ngFor="let page of pager.pageList" class="page-item">
+      <a class="page-link" (click)="setPage(page)">{{page}}</a>
+    </li>
+  </ul>
+</nav>
+Cannot read propert -->
+<!-- <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (click)="gelen($event)"  (pageChange)="page=$event"></pagination-controls> -->
